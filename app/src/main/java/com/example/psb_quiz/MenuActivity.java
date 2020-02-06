@@ -26,7 +26,13 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        
+        ICOS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuActivity.this, Module.class);
+                startActivity(intent);
 
+            }
+        });
     }
 }
