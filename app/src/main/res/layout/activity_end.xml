@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Result.end">
+    tools:context=".Result.end"
+    android:background="@drawable/beige_blur_light_95712_1600x900">
 
     <TextView
         android:id="@+id/tv_question1"
@@ -64,7 +65,7 @@
         android:layout_below="@+id/textView1"
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
-        android:text="Latest Result!"
+        android:text="Top 3 Scoreboard"
         android:textColor="#000000"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -120,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="110dp"
-            android:text="Again"
+            android:text="Re-take quiz"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -175,6 +176,7 @@
             app:layout_constraintEnd_toStartOf="@+id/topScore3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/module2" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
