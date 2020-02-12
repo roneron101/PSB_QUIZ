@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.psb_quiz.Result.end;
 import com.example.psb_quiz.Result.marks;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -43,8 +44,6 @@ public class Module extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_module);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

@@ -14,7 +14,7 @@ import com.example.psb_quiz.MainActivity;
 import com.example.psb_quiz.MenuActivity;
 import com.example.psb_quiz.Module;
 import com.example.psb_quiz.R;
-//import com.example.psb_quiz.ShowCorrectActivity;
+import com.example.psb_quiz.ShowCorrectActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,7 +39,10 @@ public class end extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_end);
-        show = findViewById(R.id.button5);
+
+        Intent intent = getIntent();
+        final String previous  = intent.getStringExtra("FROM");
+
 
         topScore1 = findViewById(R.id.topScore1);
         topScore2 = findViewById(R.id.topScore2);
@@ -90,14 +93,6 @@ public class end extends AppCompatActivity {
 
             }
         });
-
-        show.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent5 = new Intent(end.this, ShowCorrectActivity.class);
-                startActivity(intent5);
-            }
-        });
     }
 
     public void showScore () {
@@ -110,12 +105,12 @@ public class end extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot d : dataSnapshot.getChildren()){
-                    marks marks = d.getValue(com.example.ad.Result.marks.class);
+                    marks marks = d.getValue(com.example.psb_quiz.Result.marks.class);
                     userMarks.add(marks);
 
-                    Collections.sort(userMarks, new Comparator<com.example.ad.Result.marks>() {
+                    Collections.sort(userMarks, new Comparator<com.example.psb_quiz.Result.marks>() {
                         @Override
-                        public int compare(com.example.ad.Result.marks marks, com.example.ad.Result.marks t1) {
+                        public int compare(com.example.psb_quiz.Result.marks marks, com.example.psb_quiz.Result.marks t1) {
                             return t1.getScore() - marks.getScore();
 
                         }

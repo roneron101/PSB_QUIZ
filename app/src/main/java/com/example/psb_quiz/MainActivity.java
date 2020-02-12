@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
 
         btn_restart = (Button) findViewById(R.id.restart);
@@ -164,11 +162,21 @@ public class MainActivity extends AppCompatActivity {
 
                             wrong++;
                             a++;
+                            if (btn_two.getText().toString().equals(get.getAnswer()))
+                                btn_two.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_three.getText().toString().equals(get.getAnswer()))
+                                btn_three.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_four.getText().toString().equals(get.getAnswer()))
+                                btn_four.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
                             Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
                                     btn_one.getBackground().clearColorFilter();
+                                    btn_two.getBackground().clearColorFilter();
+                                    btn_three.getBackground().clearColorFilter();
+                                    btn_four.getBackground().clearColorFilter();
+
                                     NextQuestion();
                                 }
                             }, 200);
@@ -201,11 +209,21 @@ public class MainActivity extends AppCompatActivity {
                             wrong++;
                             wrongList.add(tv_question.getText().toString());
                             a++;
+                            if (btn_two.getText().toString().equals(get.getAnswer()))
+                                btn_two.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_three.getText().toString().equals(get.getAnswer()))
+                                btn_three.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_four.getText().toString().equals(get.getAnswer()))
+                                btn_four.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
                             Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
+                                    btn_one.getBackground().clearColorFilter();
                                     btn_two.getBackground().clearColorFilter();
+                                    btn_three.getBackground().clearColorFilter();
+                                    btn_four.getBackground().clearColorFilter();
+
                                     NextQuestion();
                                 }
                             }, 200);
@@ -235,12 +253,21 @@ public class MainActivity extends AppCompatActivity {
                             wrong++;
                             wrongList.add(tv_question.getText().toString());
                             a++;
-                            NextQuestion();
+                            if (btn_two.getText().toString().equals(get.getAnswer()))
+                                btn_two.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_three.getText().toString().equals(get.getAnswer()))
+                                btn_three.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_four.getText().toString().equals(get.getAnswer()))
+                                btn_four.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
                             Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
+                                    btn_one.getBackground().clearColorFilter();
+                                    btn_two.getBackground().clearColorFilter();
                                     btn_three.getBackground().clearColorFilter();
+                                    btn_four.getBackground().clearColorFilter();
+
                                     NextQuestion();
                                 }
                             }, 200);
@@ -265,16 +292,21 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }, 100);
                         } else {
-                            btn_four.getBackground().setColorFilter(Color.RED, PorterDuff.Mode.MULTIPLY);
-                            wrong++;
-                            wrongList.add(tv_question.getText().toString());
-                            a++;
-                            NextQuestion();
+                            if (btn_two.getText().toString().equals(get.getAnswer()))
+                                btn_two.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_three.getText().toString().equals(get.getAnswer()))
+                                btn_three.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
+                            else if (btn_four.getText().toString().equals(get.getAnswer()))
+                                btn_four.getBackground().setColorFilter(Color.GREEN, PorterDuff.Mode.MULTIPLY);
                             Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
+                                    btn_one.getBackground().clearColorFilter();
+                                    btn_two.getBackground().clearColorFilter();
+                                    btn_three.getBackground().clearColorFilter();
                                     btn_four.getBackground().clearColorFilter();
+
                                     NextQuestion();
                                 }
                             }, 200);
