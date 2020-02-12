@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -33,6 +34,7 @@ public class LoginInActivity extends AppCompatActivity {
         );
 
         showSignInOption();
+
     }
 
     private void showSignInOption() {
@@ -67,7 +69,6 @@ public class LoginInActivity extends AppCompatActivity {
 
     @Override
     protected void onStart() {
-        super.onStart();
         super.onStart();
         Log.v("Onstart:", "mainact");
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
